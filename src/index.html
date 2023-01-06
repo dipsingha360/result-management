@@ -9,193 +9,205 @@
   </head>
   <body class="bg-gray-100">
     <header class="bg-gradient-to-r from-indigo-500 to-indigo-600 bg-black">
-
       <!-- navbar  -->
       <nav class="navbar container mx-auto px-5 text-indigo-50 bg-amber-300-50">
-        <div class="flex  justify-between pt-3 ">
+        <div class="grid grid-cols-3">
           <!-- logo/ title  -->
-          <div class="left ">
+          <div class="left">
             <h1 class="logo font-semibold uppercase text-2xl">logo</h1>
           </div>
-          <div class="right flex gap-4">
-            <div class="username"> welcome username!</div>
-            <span>|</span>
-            <div class="login"><a href="./pages/login.html">
-              signout
-            </a></div>
+          <div
+            class="title py-10 flex flex-col justify-center items-center gap-3"
+          >
+            <h1 class="Title text-4xl font-semibold text-indigo-50">
+              Sylhet Engineering College
+            </h1>
+            <p class="text-lg">Department of Coputer Science and Engineering</p>
           </div>
-          
+
+          <div class="right ml-auto flex gap-4">
+            <div class="username">welcome username!</div>
+            <span>|</span>
+            <div class="login"><a href="./pages/login.html"> signout </a></div>
+          </div>
         </div>
       </nav>
 
       <!-- searchbar  -->
-            <div class="searchbar text-indigo-700 font-semibold pb-12 pt-5 flex flex-col gap-6 justify-center items-center">
-              <h1 class="Title text-4xl font-semibold text-indigo-50 ">Sylhet Engineering College</h1>
-                <input
-                class="border-2 border-indigo-50 bg-indigo-50/80 h-10 px-5  rounded-lg text-sm focus:outline-none w-80"
-                type="search"
-                name="search"
-                placeholder="Search reg, session etc."
-                required
-              />
-              
-            </div>
+      <!-- <div
+        class="searchbar text-indigo-700 font-semibold pb-12 pt-5 flex flex-col gap-6 justify-center items-center"
+      >
+        <h1 class="Title text-4xl font-semibold text-indigo-50">
+          Sylhet Engineering College
+        </h1>
+        <input
+          class="border-2 border-indigo-50 bg-indigo-50/80 h-10 px-5 rounded-lg text-sm focus:outline-none w-80"
+          type="search"
+          name="search"
+          placeholder="Search reg, session etc."
+          required
+        />
+      </div> -->
     </header>
 
     <!-- main body -->
-    <main class="main mt-5 container mx-auto flex flex-col">
-      <div class=" px-20 mb-10 ">
-        <div class="batchs ">
-          <div
-            class="batch bg-white text-indigo-500 p-4 rounded shadow flex flex-col gap-1 h-40 w-80 hover:bg-sky-100 duration-300 cursor-pointer border border-indigo-50/80 "
-          >
-            <h2 class="batch-title text-xl font-bold uppercase">14th Batch</h2>
-            <div>
-              <a href="#" class="semester">1</a>
-              <a href="#" class="semester">2</a>
-              <a href="#" class="semester">3</a>
-              <a href="#" class="semester">4</a>
-            </div>
-            <a href="#" class="students">Students</a>
-            <h2 class="course">Course: 5</h2>
-
+    <main class="main mt-5 container mx-auto">
+      <div class="my-10 grid grid-cols-3 gap-10 bg-gray-500">
+        <div class="left-batchs col-span-2 bg-gray-200 p-3">
+          <div class="batch-top grid py-3 pr-3">
+            <h2 class="text-center text-xl font-bold text-indigo-500">
+              All Batches
+            </h2>
+            <button
+              class="add-btn ml-auto bg-indigo-500 text-indigo-50 px-4 py-1 rounded hover:bg-indigo-600 duration-200"
+            >
+              + Add
+            </button>
           </div>
+          <div class="batch-cards grid grid-flow-col">
+            <div
+              class="batch-card bg-white text-indigo-500 p-4 rounded shadow flex flex-col items-center gap-1 h-50 w-60 hover:shadow-lg hover:border-indigo-500 hover:border-2 duration-300 border-2 border-indigo-50/80"
+            >
+              <h2 class="batch-title text-2xl font-bold uppercase">
+                14th Batch
+              </h2>
+              <div class="semesters flex flex-col">
+                <p class="text-center text-xl">Semester</p>
+                <div class="flex gap-4 text-lg py-2 flex-wrap order-4">
+                  <a
+                    href="#"
+                    class="semester bg-indigo-500 text-indigo-50 rounded-full h-8 w-8 text-center hover:bg-indigo-400 duration-100"
+                    >1</a
+                  >
+                  <a
+                    href="#"
+                    class="semester bg-indigo-500 text-indigo-50 rounded-full h-8 w-8 text-center hover:bg-indigo-400 duration-100"
+                    >2</a
+                  >
+                  <a
+                    href="#"
+                    class="semester bg-indigo-500 text-indigo-50 rounded-full h-8 w-8 text-center hover:bg-indigo-400 duration-100"
+                    >3</a
+                  >
+                  <a
+                    href="#"
+                    class="semester bg-indigo-500 text-indigo-50 rounded-full h-8 w-8 text-center hover:bg-indigo-400 duration-100"
+                    >4</a
+                  >
+                  <a
+                    href="#"
+                    class="semester bg-indigo-500 text-indigo-50 rounded-full h-8 w-8 text-center hover:bg-indigo-400 duration-100"
+                    >5</a
+                  >
+                  <a
+                    href="#"
+                    class="semester bg-indigo-500 text-indigo-50 rounded-full h-8 w-8 text-center hover:bg-indigo-400 duration-100"
+                    >6</a
+                  >
 
-          
-      </div>
-
-      <!-- Others activity -->
-      <!-- <div class="container mx-auto px-20">
-        <div class="result flex flex-col gap-3">
-          <h1 class="text-2xl font-bold">Recent Results</h1>
-          <div
-            class="flex justify-between items-center p-5 bg-blue-200 rounded font-semibold text-lg"
-          >
-            <p>Batch 12 (3/2)</p>
-            <p>45 student passed</p>
-            <p>Height CGPA: 3.99</p>
-            <a href="http:#"> Download</a>
-          </div>
-
-          <div
-            class="flex justify-between items-center p-5 bg-blue-200 rounded font-semibold text-lg"
-          >
-            <p>Batch 12 (3/2)</p>
-            <p>45 student passed</p>
-            <p>Height CGPA: 3.99</p>
-            <a href="http:#"> Download</a>
-          </div>
-
-          <div
-            class="flex justify-between items-center p-5 bg-blue-200 rounded font-semibold text-lg"
-          >
-            <p>Batch 12 (3/2)</p>
-            <p>45 student passed</p>
-            <p>Height CGPA: 3.99</p>
-            <a href="http:#"> Download</a>
-          </div>
-
-          <div
-            class="flex justify-between items-center p-5 bg-blue-200 rounded font-semibold text-lg"
-          >
-            <p>Batch 12 (3/2)</p>
-            <p>45 student passed</p>
-            <p>Height CGPA: 3.99</p>
-            <a href="http:#"> Download</a>
-          </div>
-        </div>
-      </div> -->
-
-      <!-- from web -->
-      <div class="pt-10">
-        <h2 class="text-3xl font-semibold text-indigo-600 py-5">Recent Results</h2>
-        <!-- component -->
-        <div class="flex flex-col ">
-          <div class="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
-            <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-              <div class="overflow-hidden">
-                <table class="min-w-full">
-                  <thead class="bg-white border-b">
-                    <tr class="rounded">
-                      <th
-                        scope="col"
-                        class="text-xl font-medium text-indigo-500 px-6 py-4 text-left "
-                      >
-                       Batchs
-                      </th>
-                      <th
-                        scope="col"
-                        class="text-xl font-medium text-indigo-500 px-6 py-4 text-left "
-                      >
-                        Passed 
-                      </th>
-                      <th
-                        scope="col"
-                        class="text-xl font-medium text-indigo-500 px-6 py-4 text-left "
-                      >
-                        Score
-                      </th>
-                      <th
-                        scope="col"
-                        class="text-xl font-medium text-indigo-500 px-6 py-4 text-left "
-                      >
-                        PDF
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="bg-gray-100 border-b">
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
-                      >
-                        Batch 12 (3/2)
-                      </td>
-                      <td
-                        class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
-                      >
-                        45 student passed
-                      </td>
-                      <td
-                        class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
-                      >
-                        Height CGPA: 3.99
-                      </td>
-                      <td
-                        class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
-                      >
-                        <a href="">Download</a>
-                      </td>
-                    </tr>
-                    
-                    <tr class="bg-white border-b">
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
-                      >
-                        Batch 12 (3/2)
-                      </td>
-                      <td
-                        class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
-                      >
-                        45 student passed
-                      </td>
-                      <td
-                        class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
-                      >
-                        Height CGPA: 3.99
-                      </td>
-                      <td
-                        class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"
-                      >
-                        <a href="">Download</a>
-                      </td>
-                    </tr>
-                    
-                  </tbody>
-                </table>
+                  <a
+                    href="#"
+                    class="semester bg-indigo-50 border font-2xl border-indigo-500 text-indigo-500 rounded-full h-8 w-8 text-center hover:bg-indigo-600 hover:text-indigo-50 duration-100"
+                    >+</a
+                  >
+                </div>
               </div>
+              <a href="#" class="students text-xl font-semibold">Students</a>
+              <h2 class="course">Course: 5</h2>
+            </div>
+
+            <div
+              class="batch-card bg-white text-indigo-500 p-4 rounded shadow flex flex-col items-center gap-1 h-50 w-60 hover:shadow-lg hover:border-indigo-500 hover:border-2 duration-300 border-2 border-indigo-50/80"
+            >
+              <h2 class="batch-title text-2xl font-bold uppercase">
+                14th Batch
+              </h2>
+              <div class="semesters flex flex-col">
+                <p class="text-center text-xl">Semester</p>
+                <div class="flex gap-4 text-lg py-2">
+                  <a
+                    href="#"
+                    class="semester bg-indigo-500 text-indigo-50 rounded-full h-8 w-8 text-center hover:bg-indigo-400 duration-100"
+                    >1</a
+                  >
+                  <a
+                    href="#"
+                    class="semester bg-indigo-500 text-indigo-50 rounded-full h-8 w-8 text-center hover:bg-indigo-400 duration-100"
+                    >2</a
+                  >
+                  <a
+                    href="#"
+                    class="semester bg-indigo-500 text-indigo-50 rounded-full h-8 w-8 text-center hover:bg-indigo-400 duration-100"
+                    >3</a
+                  >
+                </div>
+              </div>
+              <a href="#" class="students text-xl font-semibold">Students</a>
+              <h2 class="course">Course: 5</h2>
+            </div>
+
+            <div
+              class="batch-card bg-white text-indigo-500 p-4 rounded shadow flex flex-col items-center gap-1 h-50 w-60 hover:shadow-lg hover:border-indigo-500 hover:border-2 duration-300 border-2 border-indigo-50/80"
+            >
+              <h2 class="batch-title text-2xl font-bold uppercase">
+                14th Batch
+              </h2>
+              <div class="semesters flex flex-col">
+                <p class="text-center text-xl">Semester</p>
+                <div class="flex gap-4 text-lg py-2">
+                  <a
+                    href="#"
+                    class="semester bg-indigo-500 text-indigo-50 rounded-full h-8 w-8 text-center hover:bg-indigo-400 duration-100"
+                    >1</a
+                  >
+                  <a
+                    href="#"
+                    class="semester bg-indigo-500 text-indigo-50 rounded-full h-8 w-8 text-center hover:bg-indigo-400 duration-100"
+                    >2</a
+                  >
+                  <a
+                    href="#"
+                    class="semester bg-indigo-500 text-indigo-50 rounded-full h-8 w-8 text-center hover:bg-indigo-400 duration-100"
+                    >3</a
+                  >
+                </div>
+              </div>
+              <a href="#" class="students text-xl font-semibold">Students</a>
+              <h2 class="course">Course: 5</h2>
+            </div>
+
+            <div
+              class="batch-card bg-white text-indigo-500 p-4 rounded shadow flex flex-col items-center gap-1 h-50 w-60 hover:shadow-lg hover:border-indigo-500 hover:border-2 duration-300 border-2 border-indigo-50/80"
+            >
+              <h2 class="batch-title text-2xl font-bold uppercase">
+                14th Batch
+              </h2>
+              <div class="semesters flex flex-col">
+                <p class="text-center text-xl">Semester</p>
+                <div class="flex gap-4 text-lg py-2">
+                  <a
+                    href="#"
+                    class="semester bg-indigo-500 text-indigo-50 rounded-full h-8 w-8 text-center hover:bg-indigo-400 duration-100"
+                    >1</a
+                  >
+                  <a
+                    href="#"
+                    class="semester bg-indigo-500 text-indigo-50 rounded-full h-8 w-8 text-center hover:bg-indigo-400 duration-100"
+                    >2</a
+                  >
+                  <a
+                    href="#"
+                    class="semester bg-indigo-500 text-indigo-50 rounded-full h-8 w-8 text-center hover:bg-indigo-400 duration-100"
+                    >3</a
+                  >
+                </div>
+              </div>
+              <a href="#" class="students text-xl font-semibold">Students</a>
+              <h2 class="course">Course: 5</h2>
             </div>
           </div>
         </div>
+        <div class="right bg-gray-400"></div>
       </div>
     </main>
   </body>
