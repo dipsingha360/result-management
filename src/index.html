@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
-    <title>Check Tailwindcss</title>
+    <title>Result managemant</title>
   </head>
-  <body class="bg-gray-100">
+  <body class="bg-gray-100 overflow-hidden">
     <header class="bg-gradient-to-r from-indigo-500 to-indigo-600 bg-black">
       <!-- navbar  -->
       <nav class="navbar container mx-auto px-5 text-indigo-50 bg-amber-300-50">
@@ -67,7 +67,7 @@
 
           <div class="batch-cards grid grid-cols-3 gap-3 justify-center">
             <div
-              class="batch-card bg-white text-indigo-500 p-4 rounded shadow flex flex-col items-center gap-1 h-55 w-70 hover:shadow-lg hover:border-indigo-500 hover:border-2 duration-300 border-2 border-indigo-50/80"
+              class="batch-card bg-white text-indigo-500 p-4 rounded shadow flex flex-col items-center gap-1 h-55 w-70 border-2 border-indigo-50/80 hover:shadow-lg hover:border-indigo-500 hover:border-2 duration-300"
             >
               <h2 class="batch-title text-3xl font-bold uppercase">
                 14th Batch
@@ -136,15 +136,105 @@
             </h2>
           </div>
           <div
-            class="right-upper flex flex-col justify-center items-center gap-3"
+            class="right-upper flex flex-col justify-center items-center gap-3 bg-gray-100 rounded border-b-2 border-indigo-400 p-3 mt-3"
           >
-            <h2>Input reg number</h2>
-            <form action="">
-              <input type="text" class="outline-none" />
+            <h2 class="text-xl font-semibold text-gray-500">
+              Input reg number
+            </h2>
+            <form action="" class="">
+              <input
+                type="text"
+                class="outline-none w-80 h-10 rounded-full px-3 border border-indigo-200"
+              />
             </form>
-            <button>submit</button>
+            <a
+              href="#"
+              class="students text-lg text-indigo-500 font-semibold bg-indigo-50 px-3 border rounded-full border-indigo-500 hover:bg-indigo-200 duration-200"
+              >Submit</a
+            >
           </div>
-          <div class="right-lower"></div>
+          <div class="right-lower pt-3">
+            <div
+              class="right-lower-title grid grid-cols-3 justify-center items-center"
+            >
+              <h2 class="text-xl font-bold text-indigo-500 gris col-span-2">
+                Teachers
+              </h2>
+              <button
+                class="add-btn ml-auto bg-indigo-500 text-indigo-50 px-4 py-1 rounded hover:bg-indigo-600 duration-200"
+              >
+                + Add
+              </button>
+            </div>
+            <div class="teachers-list">
+              <div
+                class="teacher flex justify-between items-center bg-gray-100 p-3 mt-3 shadow rounded border-2 border-indigo-50/80 hover:shadow-lg hover:border-indigo-500 hover:border-2 duration-300"
+              >
+                <div class="title flex flex-col">
+                  <p class="font-semibold text-xl text-indigo-500">
+                    Nayan Kumar Nath
+                  </p>
+                  <p class="italic font-medium text-gray-500">
+                    Lecturer, CSE, SEC
+                  </p>
+                </div>
+                <div class="course flex flex-col">
+                  <p
+                    class="font-semibold text-xl bg-indigo-100 rounded border text-center text-indigo-500"
+                  >
+                    Courses:
+                  </p>
+                  <p class="font-medium text-gray-600">CSE-101 (2018-19)</p>
+                  <p class="font-medium text-gray-600">CSE-101 (2018-19)</p>
+                  <p class="font-medium text-gray-600">CSE-101 (2018-19)</p>
+                </div>
+              </div>
+              <div
+                class="teacher flex justify-between items-center bg-gray-100 p-3 mt-3 shadow rounded border-2 border-indigo-50/80 hover:shadow-lg hover:border-indigo-500 hover:border-2 duration-300"
+              >
+                <div class="title flex flex-col">
+                  <p class="font-semibold text-xl text-indigo-500">
+                    Nayan Kumar Nath
+                  </p>
+                  <p class="italic font-medium text-gray-500">
+                    Lecturer, CSE, SEC
+                  </p>
+                </div>
+                <div class="course flex flex-col">
+                  <p
+                    class="font-semibold text-xl bg-indigo-100 rounded border text-center text-indigo-500"
+                  >
+                    Courses:
+                  </p>
+                  <p class="font-medium text-gray-600">CSE-101 (2018-19)</p>
+                  <p class="font-medium text-gray-600">CSE-101 (2018-19)</p>
+                  <p class="font-medium text-gray-600">CSE-101 (2018-19)</p>
+                </div>
+              </div>
+              <div
+                class="teacher flex justify-between items-center bg-gray-100 p-3 mt-3 shadow rounded border-2 border-indigo-50/80 hover:shadow-lg hover:border-indigo-500 hover:border-2 duration-300"
+              >
+                <div class="title flex flex-col">
+                  <p class="font-semibold text-xl text-indigo-500">
+                    Nayan Kumar Nath
+                  </p>
+                  <p class="italic font-medium text-gray-500">
+                    Lecturer, CSE, SEC
+                  </p>
+                </div>
+                <div class="course flex flex-col">
+                  <p
+                    class="font-semibold text-xl bg-indigo-100 rounded border text-center text-indigo-500"
+                  >
+                    Courses:
+                  </p>
+                  <p class="font-medium text-gray-600">CSE-101 (2018-19)</p>
+                  <p class="font-medium text-gray-600">CSE-101 (2018-19)</p>
+                  <p class="font-medium text-gray-600">CSE-101 (2018-19)</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
