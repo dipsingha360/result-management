@@ -1,0 +1,10 @@
+.content-table {
+  border-collapse: collapse;
+  min-width: 1535px;
+}
+table,
+tr,
+th,
+td {
+  border: 1px solid gray;
+}
