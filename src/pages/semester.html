@@ -67,7 +67,22 @@
       </div>
 
       <div class="tabulation-sheet container mx-auto">
-        <table class="content-table">
+        <div class="courses-head flex justify-between py-3">
+          <h2 class="text-2xl font-semibold text-indigo-500">Tabulation Sheet</h2>
+
+          <div class="btns flex">
+            <div class="upload-btn">
+              <label class="block">
+              <span class="sr-only">Chose File</span>
+              <input type="file" accept=".csv"
+                class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" />
+              </label>
+            </div>
+
+            <a href="" class="add-btn ml-auto bg-indigo-500 text-indigo-50 px-4 py-1 rounded hover:bg-indigo-600 duration-200">Download</a>
+          </div>
+        </div>
+      <table class="content-table">
         <tr>
           <th colspan="6" rowspan="2"></th>
           <th colspan="2">CSE-201 </th>
@@ -79,8 +94,8 @@
           <th colspan="2">CSE-201</th>
           <th colspan="2">CSE-201</th>
           <th colspan="2">CSE-201</th>
-          <th colspan="3">2nd Semester</th>
-          <th colspan="3">3rd Semester</th>
+          <th colspan="3" rowspan="2">2nd Semester</th>
+          <th colspan="3" rowspan="2">3rd Semester</th>
         </tr>
 
         <tr>
@@ -94,8 +109,6 @@
           <th colspan="2">3.00</th>
           <th colspan="2">1.50</th>
           <th colspan="2">2.00</th>
-          <th colspan="3">2nd Semester</th>
-          <th colspan="3">3rd Semester</th>
         </tr>
 
         <tr>
