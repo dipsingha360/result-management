@@ -9,11 +9,49 @@
     <title>Semester</title>
   </head>
   <body>
+
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <title>Result managemant</title>
+  </head>
+  <body class="bg-gray-100 overflow-hidden">
+    <header class="bg-gradient-to-r from-indigo-500 to-indigo-600 bg-black">
+      <!-- navbar  -->
+      <nav class="navbar container mx-auto px-5 text-indigo-50 bg-amber-300-50">
+        <div class="grid grid-cols-3 pt-5">
+          <!-- logo/ title  -->
+          <div class="left ">
+            <h1 class="logo font-semibold uppercase text-2xl">logo</h1>
+          </div>
+          <div
+            class="title py-10 flex flex-col justify-center items-center gap-3"
+          >
+            <h1 class="Title text-4xl font-semibold text-indigo-50">
+              Sylhet Engineering College
+            </h1>
+            <p class="text-lg">Department of Coputer Science and Engineering</p>
+          </div>
+
+          <div class="right ml-auto flex gap-4">
+            <a class="hover:text-teal-300 duration-200" href="../index.html" class="home">Home</a>
+            <span class="opacity-30">|</span>
+            <p class="username">username</p>
+            <span class="opacity-30">|</span>
+            <div class="sign-out "><a class="hover:text-teal-300 duration-200" href="./login.html"> signout </a></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
     <div class="container mx-auto pb-3">
-      <div class="title flex flex-col justify-center items-center bg-indigo-500 py-5 rounded">
+      <!-- <div class="title flex flex-col justify-center items-center bg-indigo-500 py-5 rounded">
         <h1 class="text-4xl font-bold text-indigo-50">Batch 14th</h1>
         <p class="text-xl text-indigo-50 font-semibold">Semester : 1</p>
-      </div>
+      </div> -->
+
 
       <div class="courses flex flex-col">
 
@@ -52,11 +90,11 @@
               >
                 Edit
               </button>
-              <button
-                class="bg-indigo-50 border rounded-full px-2 hover:border-indigo-300"
+              <a
+                href="./course.html" class="bg-indigo-50 border rounded-full px-2 hover:border-indigo-300"
               >
                 View
-              </button>
+              </a>
             </div>
           </div>
 
@@ -68,18 +106,18 @@
 
       <div class="tabulation-sheet container mx-auto">
         <div class="courses-head flex justify-between py-3">
-          <h2 class="text-2xl font-semibold text-indigo-500">Tabulation Sheet</h2>
+          <h2 class="text-2xl font-bold text-indigo-500">Tabulation Sheet</h2>
 
           <div class="btns flex">
             <div class="upload-btn">
               <label class="block">
               <span class="sr-only">Chose File</span>
               <input type="file" accept=".csv"
-                class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" />
+                class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border file:border-indigo-100 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" />
               </label>
             </div>
 
-            <a href="" class="add-btn ml-auto bg-indigo-500 text-indigo-50 px-4 py-1 rounded hover:bg-indigo-600 duration-200">Download</a>
+            <a href="" class="add-btn ml-auto bg-indigo-500 text-indigo-50 px-4 py-1 rounded-full hover:bg-indigo-600 duration-200">Download</a>
           </div>
         </div>
       <table class="content-table">
@@ -163,12 +201,12 @@
           <td>77</td>
           <td>56</td>
           <td>77</td>
-          <td>one</td>
-          <td>one</td>
-          <td>one</td>
-          <td>one</td>
-          <td>one</td>
-          <td>one</td> 
+          <td>22.5</td>
+          <td>4</td>
+          <td>3.45</td>
+          <td>21.5</td>
+          <td>4</td>
+          <td>4.50</td> 
         </tr>
 
       </table>
