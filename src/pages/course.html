@@ -4,9 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./course.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <title>Course</title>
+    <style>
+      .content-table {
+  border-collapse: collapse;
+  min-width: 1535px;
+}
+table,
+tr,
+th,
+td {
+  border: 1px solid gray;
+  text-align: center;
+}
+
+    </style>
   </head>
   <body>
     <header class="bg-gradient-to-r from-indigo-500 to-indigo-600 bg-black">
@@ -92,9 +106,9 @@
               </label>
             </div>
 
-            <button href="" class="add-btn ml-auto bg-indigo-500 text-indigo-50 px-4 py-1 rounded-full hover:bg-indigo-600 duration-200">Add</button>
-            <button href="" class="add-btn ml-auto bg-indigo-500 text-indigo-50 px-4 py-1 rounded-full hover:bg-indigo-600 duration-200">Edit</button>
-            <button href="" class="add-btn ml-auto bg-indigo-200 text-indigo-700 px-4 py-1 rounded-full border border-indigo-500 hover:text-indigo-50 hover:bg-indigo-600 duration-200">Delete</button>
+            <button class="add-btn ml-auto bg-indigo-500 text-indigo-50 px-4 py-1 rounded-full hover:bg-indigo-600 duration-200">Add</button>
+            <!-- <button class="add-btn ml-auto bg-indigo-500 text-indigo-50 px-4 py-1 rounded-full hover:bg-indigo-600 duration-200">Edit</button>
+            <button class="add-btn ml-auto bg-indigo-200 text-indigo-700 px-4 py-1 rounded-full border border-indigo-500 hover:text-indigo-50 hover:bg-indigo-600 duration-200">Delete</button> -->
           </div>
         </div>
 
@@ -112,6 +126,7 @@
           <th>Total Marks</th>
           <th>GP</th>
           <th>LG</th>
+          <th></th>
         </tr>
 
         <tr>
@@ -126,12 +141,21 @@
           <td>89</td>
           <td>89</td>
           <td>77</td>
+          <td>
+              <div class="button flex gap-3 items-center justify-center text-xl"> 
+                <button class="edit hover:text-indigo-500 duration-200" ><ion-icon name="create-outline"></ion-icon>
+                </button>
+                <button class="delete hover:text-indigo-500 duration-200" ><ion-icon name="trash-outline"></ion-icon>
+                </button>
+              </div>
+          </td>
         </tr>
 
+
         <tr>
-          <td>02</td>
+          <td>01</td>
           <td colspan="2">2018331563</td>
-          <td colspan="3">Ashraful</td>
+          <td colspan="3">Ashraful Ahmed</td>
           <td>77</td>
           <td>55</td>
           <td>44</td>
@@ -140,8 +164,22 @@
           <td>89</td>
           <td>89</td>
           <td>77</td>
+          <td>
+              <div class="button flex gap-3 items-center justify-center text-xl"> 
+                <button class="edit hover:text-indigo-500 duration-200" ><ion-icon name="create-outline"></ion-icon>
+                </button>
+                <button class="delete hover:text-indigo-500 duration-200" ><ion-icon name="trash-outline"></ion-icon>
+                </button>
+              </div>
+          </td>
         </tr>
+
+        
       </table>
     </div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 </html>
