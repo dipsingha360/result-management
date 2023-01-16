@@ -5,7 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
+
     <title>Result managemant</title>
+    <style>
+      /* since nested groupes are not supported we have to use 
+     regular css for the nested dropdowns 
+  */
+      li > ul {
+        transform: translatex(100%) scale(0);
+      }
+      li:hover > ul {
+        transform: translatex(101%) scale(1);
+      }
+      li > button svg {
+        transform: rotate(-90deg);
+      }
+      li:hover > button svg {
+        transform: rotate(-270deg);
+      }
+
+      /* Below styles fake what can be achieved with the tailwind config
+     you need to add the group-hover variant to scale and define your custom
+     min width style.
+  	 See https://codesandbox.io/s/tailwindcss-multilevel-dropdown-y91j7?file=/index.html
+  	 for implementation with config file
+  */
+      .group:hover .group-hover\:scale-100 {
+        transform: scale(1);
+      }
+      .group:hover .group-hover\:-rotate-180 {
+        transform: rotate(180deg);
+      }
+      .scale-0 {
+        transform: scale(0);
+      }
+      .min-w-32 {
+        min-width: 8rem;
+      }
+    </style>
   </head>
   <body class="bg-gray-100 overflow-hidden">
     <header class="bg-gradient-to-r from-indigo-500 to-indigo-600 bg-black">
@@ -59,6 +96,7 @@
 
     <!-- modal -->
     <!-- Code block starts -->
+
     <dh-component>
       <div
         class="py-60 bg-gray-700/70 transition duration-200 ease-in-out z-10 absolute top-0 right-0 bottom-0 left-0"
@@ -73,11 +111,45 @@
               class="text-gray-800 text-sm font-bold leading-tight tracking-normal"
               >Batch</label
             >
-            <input
+            <!-- <input
               id="name"
               class="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
               placeholder="Type batch name"
-            />
+            /> -->
+
+            <!-- drop down starts -->
+            <div class="group">
+              <button
+                class="outline-none px-3 py-1 bg-white mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-40 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
+              >
+                <span class="pr-1 flex-1 text-gray-600/80 text-sm"
+                  >Select session</span
+                >
+                <span>
+                  <svg
+                    class="fill-current h-4 w-4 transform group-hover:-rotate-180 transition duration-300 ease-in-out"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <ul
+                class="bg-indigo-200 border rounded-sm transform scale-0 group-hover:scale-100 absolute transition duration-300 ease-in-out origin-top min-w-32"
+              >
+                <li class="rounded-sm px-3 py-1 hover:bg-gray-100">2022-23</li>
+                <li class="rounded-sm px-3 py-1 hover:bg-gray-100">2021-22</li>
+                <li class="rounded-sm px-3 py-1 hover:bg-gray-100">2020-21</li>
+                <li class="rounded-sm px-3 py-1 hover:bg-gray-100">2019-20</li>
+                <li class="rounded-sm px-3 py-1 hover:bg-gray-100">2018-19</li>
+                <li class="rounded-sm px-3 py-1 hover:bg-gray-100">2017-18</li>
+              </ul>
+            </div>
+
+            <!-- drop down ends -->
 
             <label
               for="name"
