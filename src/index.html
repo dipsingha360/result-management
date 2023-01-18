@@ -99,8 +99,7 @@
 
     <dh-component>
       <div
-        class="py-60 bg-gray-700/70 transition duration-200 ease-in-out z-10 absolute top-0 right-0 bottom-0 left-0"
-        id="modal"
+        class="modal py-60 bg-gray-700/70 transition duration-200 ease-in-out z-10 absolute top-0 right-0 bottom-0 left-0 hidden"
       >
         <div role="alert" class="container mx-auto w-11/12 md:w-2/3 max-w-lg">
           <div
@@ -174,20 +173,18 @@
 
             <div class="flex items-center justify-start w-full">
               <button
-                class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 bg-indigo-700 rounded text-white px-8 py-2 text-sm"
+                class="create focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 bg-indigo-700 rounded text-white px-8 py-2 text-sm"
               >
                 Create
               </button>
               <button
-                class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 ml-3 bg-gray-100 transition duration-150 text-gray-600 ease-in-out hover:border-gray-400 hover:bg-gray-300 border rounded px-8 py-2 text-sm"
-                onclick="modalHandler()"
+                class="cross-btn focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 ml-3 bg-gray-100 transition duration-150 text-gray-600 ease-in-out hover:border-gray-400 hover:bg-gray-300 border rounded px-8 py-2 text-sm"
               >
                 Cancel
               </button>
             </div>
             <button
-              class="cursor-pointer absolute top-0 right-0 mt-4 mr-5 text-gray-400 hover:text-gray-600 transition duration-150 ease-in-out rounded focus:ring-2 focus:outline-none focus:ring-gray-600"
-              onclick="modalHandler()"
+              class="cross-btn cursor-pointer absolute top-0 right-0 mt-4 mr-5 text-gray-400 hover:text-gray-600 transition duration-150 ease-in-out rounded focus:ring-2 focus:outline-none focus:ring-gray-600"
               aria-label="close modal"
               role="button"
             >
@@ -224,8 +221,7 @@
               All Batches
             </h2>
             <button
-              class="add-btn ml-auto bg-indigo-500 text-indigo-50 px-4 py-1 rounded hover:bg-indigo-600 duration-200"
-              onclick="modalHandler(true)"
+              class="batch-show-modal add-btn ml-auto bg-indigo-500 text-indigo-50 px-4 py-1 rounded hover:bg-indigo-600 duration-200"
             >
               + Add
             </button>
@@ -309,7 +305,7 @@
                 Teachers
               </h2>
               <button
-                class="add-btn ml-auto bg-indigo-500 text-indigo-50 px-4 py-1 rounded hover:bg-indigo-600 duration-200"
+                class="teacher-show-modal add-btn ml-auto bg-indigo-500 text-indigo-50 px-4 py-1 rounded hover:bg-indigo-600 duration-200"
               >
                 + Add
               </button>
@@ -350,35 +346,26 @@
     </main>
 
     <script>
-      let modal = document.getElementById("modal");
-      function modalHandler(val) {
-        if (val) {
-          fadeIn(modal);
-        } else {
-          fadeOut(modal);
-        }
-      }
-      function fadeOut(el) {
-        el.style.opacity = 1;
-        (function fade() {
-          if ((el.style.opacity -= 0.1) < 0) {
-            el.style.display = "none";
-          } else {
-            requestAnimationFrame(fade);
-          }
-        })();
-      }
-      function fadeIn(el, display) {
-        el.style.opacity = 0;
-        el.style.display = display || "flex";
-        (function fade() {
-          let val = parseFloat(el.style.opacity);
-          if (!((val += 0.2) > 1)) {
-            el.style.opacity = val;
-            requestAnimationFrame(fade);
-          }
-        })();
-      }
+      // batch modal start
+      const modal = document.querySelector(".modal");
+      const batchShowModal = document.querySelector(".batch-show-modal");
+      const crossBtns = document.querySelectorAll(".cross-btn");
+      const create = document.querySelector(".create");
+
+      batchShowModal.addEventListener("click", function () {
+        modal.classList.remove("hidden");
+      });
+
+      crossBtns.forEach((crossBtn) => {
+        crossBtn.addEventListener("click", function () {
+          modal.classList.add("hidden");
+        });
+      });
+
+      create.addEventListener("click", function () {
+        modal.classList.add("hidden");
+      });
+      // batch modal end
     </script>
   </body>
 </html>
